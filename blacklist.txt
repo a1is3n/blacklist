@@ -1,0 +1,132 @@
+# Spamhaus Don't Route Or Peer List (DROP)
+# Details: http://www.spamhaus.org/drop/
+SPAMDROP|86400|0|http://www.spamhaus.org/drop/drop.txt
+
+# Spamhaus Extended DROP List (EDROP)
+# Details: http://www.spamhaus.org/drop/
+SPAMEDROP|86400|0|http://www.spamhaus.org/drop/edrop.txt
+
+# DShield.org Recommended Block List
+# Details: https://dshield.org
+DSHIELD|86400|0|https://www.dshield.org/block.txt
+
+# TOR Exit Nodes List
+# Set URLGET in csf.conf to use LWP as this list uses an SSL connection
+# Details: https://trac.torproject.org/projects/tor/wiki/doc/TorDNSExitList
+TOR|86400|0|https://www.dan.me.uk/torlist/
+
+# BOGON list
+# Details: http://www.team-cymru.org/Services/Bogons/
+BOGON|86400|0|http://www.cymru.com/Documents/bogon-bn-agg.txt
+
+# Project Honey Pot Directory of Dictionary Attacker IPs
+# Details: http://www.projecthoneypot.org
+HONEYPOT|86400|0|https://www.projecthoneypot.org/list_of_ips.php?t=d&rss=1
+
+# C.I. Army Malicious IP List
+# Details: http://www.ciarmy.com
+CIARMY|86400|0|http://www.ciarmy.com/list/ci-badguys.txt
+
+# BruteForceBlocker IP List
+# Details: http://danger.rulez.sk/index.php/bruteforceblocker/
+BFB|86400|0|http://danger.rulez.sk/projects/bruteforceblocker/blist.php
+
+# MaxMind GeoIP Anonymous Proxies
+# Set URLGET in csf.conf to use LWP as this list uses an SSL connection
+# Details: https://www.maxmind.com/en/anonymous_proxies
+MAXMIND|86400|0|https://www.maxmind.com/en/anonymous_proxies
+
+# Blocklist.de
+# Set URLGET in csf.conf to use LWP as this list uses an SSL connection
+# Details: https://www.blocklist.de
+# This first list only retrieves the IP addresses added in the last hour
+BDE|3600|0|https://api.blocklist.de/getlast.php?time=3600
+
+# This second list retrieves all the IP addresses added in the last 48 hours
+# and is usually a very large list (over 10000 entries), so be sure that you
+# have the resources available to use it
+BDEALL|86400|0|http://lists.blocklist.de/lists/all.txt
+
+# Stop Forum Spam
+# Many of the lists available contain a vast number of IP addresses so special
+# care needs to be made when selecting from their lists
+STOPFORUMSPAM|86400|0|http://www.stopforumspam.com/downloads/listed_ip_1.zip
+
+# GreenSnow Hack List
+# Details: https://greensnow.co
+GREENSNOW|86400|0|https://blocklist.greensnow.co/greensnow.txt
+
+# AbuseIPDB blacklist
+# Details: https://docs.abuseipdb.com/#blacklist-endpoint
+ABUSEIPDB|86400|10000|https://api.abuseipdb.com/api/v2/blacklist?key=f58d2aee7a73ed207fe21f0252679dc73aec5801f799fad30309d0b64b280da42c7ea81ef4554836&plaintext
+
+# RJM Blocklist Consolidated Bad IP List (Free)
+# Details: https://www.rjmblocklist.com
+RJMBBADIPS|86400|0|https://www.rjmblocklist.com/free/badips.txt
+
+#IP addresses which have been reported within the last 48 hours as
+#having run attacks on the service SSH.
+BDESSH|86400|0|https://lists.blocklist.de/lists/ssh.txt
+
+#IP addresses which have been reported within the last 48 hours as
+#having run attacks on the service Mail, Postfix.
+BDEMAIL|86400|0|https://lists.blocklist.de/lists/mail.txt
+
+#IP addresses which have been reported within the last 48 hours as
+#having run attacks on the service Apache, Apache-DDOS, RFI-Attacks
+BDEAPACHE|86400|0|https://lists.blocklist.de/lists/apache.txt
+
+#IP addresses which have been reported within the last 48 hours
+#for attacks on the Service imap, sasl, pop3
+BDEIMAP|86400|0|https://lists.blocklist.de/lists/imap.txt
+
+#IP addresses which have been reported within the last 48 hours
+#for attacks on the Service FTP.
+BDEFTP|86400|0|https://lists.blocklist.de/lists/ftp.txt
+
+#IP addresses that tried to login in a SIP-, VOIP- or Asterisk-Server
+#and are inclueded in the IPs-List from http://www.infiltrated.net/
+BDESIP|86400|0|https://lists.blocklist.de/lists/sip.txt
+
+#IP addresses which have been reported within the last 48 hours as
+#having run attacks attacks on the RFI-Attacks, REG-Bots, IRC-Bots
+#or BadBots
+BDEBOTS|86400|0|https://lists.blocklist.de/lists/bots.txt
+
+#IP addresses older then 2 month & have more then 5.000 attacks.
+BDESTRONGIPS|86400|0|https://lists.blocklist.de/lists/strongips.txt
+
+#IP addresses for ircbot
+BDEIRCBOT|86400|0|https://lists.blocklist.de/lists/ircbot.txt
+
+#IP addresses which attacks Joomlas, WordPress and other Web-Logins
+#with Brute-Force Logins
+BDEBRUTEFORCE|86400|0|https://lists.blocklist.de/lists/bruteforcelogin.txt
+
+#Alienvault Reputation Malicious IP Block
+ALIENVAULT_REPUTATION|86400|0|https://reputation.alienvault.com/reputation.generic
+
+# BinaryDefense
+BDS_ATIF|86400|0|https://www.binarydefense.com/banlist.txt
+
+# darklist.de - blacklisted raw IPs
+DARKLIST_DE|86400|0|http://www.darklist.de/raw.php
+
+# Emerging Threats fwip rules.
+ET_BLOCK|86400|0|https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
+ET_COMPROMISED|86400|0|https://rules.emergingthreats.net/blockrules/compromised-ips.txt
+
+# abuse.ch Feodo Tracker Botnet C2 IP Blocklist (recommended)
+FEODO|86400|0|https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt
+
+#Malcode
+MALC0DE|86400|0|http://malc0de.com/bl/IP_Blacklist.txt
+
+# LIVE BLACKLIST IPv4/IPv6 ADDRESSES DATABASE
+MYIP|86400|0|https://myip.ms/files/blacklist/csf/latest_blacklist.txt
+
+# HTTP spam sources identified by http://sblam.com.
+SBLAM|86400|0|https://sblam.com/blacklist.txt
+
+# A distributed VoIP blacklist that is aimed to protects against VoIP Fraud 
+VOIPBL|86400|0|http://www.voipbl.org/update/
